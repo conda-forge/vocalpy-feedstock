@@ -1,5 +1,5 @@
 {% set name = "vocalpy" %}
-{% set version = "0.9.2" %}
+{% set version = "0.9.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/vocalpy-{{ version }}.tar.gz
-  sha256: 5debb2302cbe33aa5260b916cfa1352e6703bbfe4b2ede6eaa9b0066c04f986f
+  sha256: 80386c8771fb911ff4805350bb07ba1a4af9f4148b8c5519ffa2dae291f4adb3
 
 build:
   noarch: python

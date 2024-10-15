@@ -18,9 +18,7 @@ requirements:
   host:
     - python >=3.10
     - flit-core >=3.2,<4
-    # place temporary upper bound on pip so pip check does not fail on soundfile
-    # see https://github.com/conda-forge/pysoundfile-feedstock/issues/22
-    - pip <24.2
+    - pip
   run:
     - python >=3.10
     - attrs >=23.1.0
@@ -42,7 +40,9 @@ test:
   commands:
     - pip check
   requires:
-    - pip
+    # place temporary upper bound on pip so pip check does not fail on soundfile
+    # see https://github.com/conda-forge/pysoundfile-feedstock/issues/22
+    - pip <24.2
 
 about:
   summary: A core package for acoustic communication research in Python

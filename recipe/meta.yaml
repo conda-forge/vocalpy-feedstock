@@ -1,6 +1,6 @@
-{% set python_min = "3.11" %}
+{% set python_min = "3.12" %}
 {% set name = "vocalpy" %}
-{% set version = "0.10.3" %}
+{% set version = "0.10.3.post1" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/vocalpy-{{ version }}.tar.gz
-  sha256: b2a7a10e7c8818495f610f8ac889d1126876fab2eda9ed72ba0e2e0176d4ebda
+  sha256: 4bb3bd88cb94fe8a551ccac844b436615070cac2b96b40f3f963a7419e3db038
 
 build:
   noarch: python
@@ -23,13 +23,13 @@ requirements:
   run:
     - python >={{ python_min }}
     - attrs >=25.3.0
-    - crowsetta >=5.1.2
+    - crowsetta >=5.1.3
     - dask-core >=2025.5.1
     - h5netcdf >=1.3.0
-    - librosa >=0.10.2.post1
-    - matplotlib-base >=3.7.1
-    - numpy >=1.26.0
-    - pandas >=2.1.0
+    - librosa >=0.11.0
+    - matplotlib-base >=3.9.0
+    - numpy >=2.0.0
+    - pandas >=2.2.0
     - pooch >=1.8.2
     - scipy >=1.12.0
     - pysoundfile >=0.13.1

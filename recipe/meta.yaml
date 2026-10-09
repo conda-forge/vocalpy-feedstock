@@ -41,9 +41,7 @@ test:
   commands:
     - pip check
   requires:
-    # place temporary upper bound on pip so pip check does not fail on soundfile
-    # see https://github.com/conda-forge/pysoundfile-feedstock/issues/22
-    - pip <24.2
+    - pip
     - python {{ python_min }}
 
 about:
